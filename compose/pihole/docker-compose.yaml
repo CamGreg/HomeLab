@@ -14,7 +14,7 @@ services:
       - "8081:443/tcp"
     environment:
       TZ: 'America/Vancouver'
-      WEBPASSWORD:${WEBPASSWORD} #see .env file
+      WEBPASSWORD: ${WEBPASSWORD} #see .env file
     #'set a secure password here or it will be random'
     # Volumes store your data between container upgrades
     volumes:

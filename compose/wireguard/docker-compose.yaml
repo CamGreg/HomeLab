@@ -10,7 +10,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Vancouver
-      - SERVERURL=${SERVERUR} #see .env
+      - SERVERURL=${SERVERURL} #see .env
       - SERVERPORT=${SERVERPORT} #see .env
       - PEERS=4 #optional
       #- PEERDNS=172.19.0.10 #optional
