@@ -5,6 +5,8 @@ services:
             - '/media:/data'
             - '/etc/localtime:/etc/localtime:ro'
         environment:
+            - PUID=1000
+            - PGID=1000
             - CREATE_TUN_DEVICE=true
             - OPENVPN_PROVIDER=PIA #PROTONVPN #PIA
             - OPENVPN_CONFIG=us_california,switzerland,netherlands,us_seattle
@@ -15,7 +17,7 @@ services:
             - OPENVPN_OPTS=--inactive 3600 --ping 10 --ping-exit 60
             - TRANSMISSION_SCRAPE_PAUSED_TORRENTS_ENABLED=false
             - TRANSMISSION_UMASK=0
-            - TRANSMISSION_WEB_UI=combustion
+            #- TRANSMISSION_WEB_UI=combustion
         cap_add:
             - NET_ADMIN
         logging:

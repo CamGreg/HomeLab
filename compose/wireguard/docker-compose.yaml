@@ -16,7 +16,7 @@ services:
       #- PEERDNS=172.19.0.10 #optional
       #- INTERNAL_SUBNET=10.13.13.0 #optional
     volumes:
-      - /home/cam/wireguard/config:/config
+      - ~/containerData/wireguard/config:/config
       - /lib/modules:/lib/modules
       - /usr/src:/usr/src
     ports:
@@ -24,7 +24,7 @@ services:
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
-networks:
-  default:
-    external:
-      name: pihole_default
+#networks:
+ # default:
+  #  external:
+   #   name: pihole_default

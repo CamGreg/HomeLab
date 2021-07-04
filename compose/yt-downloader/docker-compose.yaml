@@ -5,11 +5,11 @@ services:
             ALLOW_CONFIG_MUTATIONS: 'true'
         restart: always
         volumes:
-            - ./appdata:/app/appdata
-            - ./audio:/app/audio
-            - ./video:/app/video
-            - ./subscriptions:/app/subscriptions
-            - ./users:/app/users
+            - ~/containerData/YTDownload/appdata:/app/appdata
+            - ~/containerData/YTDownload/audio:/app/audio
+            - ~/containerData/YTDownload/video:/app/video
+            - ~/containerData/YTDownload/subscriptions:/app/subscriptions
+            - ~/containerData/YTDownload/users:/app/users
         networks:
             - default
         ports:
