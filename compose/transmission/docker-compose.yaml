@@ -9,7 +9,7 @@ services:
             - PGID=1000
             - CREATE_TUN_DEVICE=true
             - OPENVPN_PROVIDER=PIA #PROTONVPN #PIA
-            - OPENVPN_CONFIG=us_california,switzerland,netherlands,us_seattle
+            - OPENVPN_CONFIG=us_california#us_seattle#,us_california#,switzerland,netherlands
             - OPENVPN_USERNAME=${OPENVPN_USERNAME} #see .env file
             - OPENVPN_PASSWORD=${OPENVPN_PASSWORD} #see .env file
             - WEBPROXY_ENABLED=false

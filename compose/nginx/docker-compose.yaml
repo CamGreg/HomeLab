@@ -1,14 +1,31 @@
-version: '3'
-
+version: "2.1"
 services:
-  server:
-    image: nginx:alpine
-    restart: always
+  nginx:
+    image: ghcr.io/linuxserver/nginx
+    container_name: nginx
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - $HOME/containerData/NginxServer/config:/config
     ports:
       - 70:80
-    volumes:
-      - ./Server/data/:/srv/
-      - ./Server/nginx.conf:/etc/nginx/conf.d/default.conf
+      - 442:443
+    restart: unless-stopped
+
+#version: '3'
+
+#services:
+#  server:
+#    image: nginx:alpine
+#    restart: always
+#    ports:
+#      - 70:80
+#    volumes:
+#      - $HOME/containerData/NginxServer/data/:/srv/
+#      - $HOME/containerData/NginxServer/nginx.conf/:/etc/nginx/conf.d/
+#default.conf
 
 #networks:
  # default:
