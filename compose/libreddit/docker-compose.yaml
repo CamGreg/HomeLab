@@ -2,6 +2,7 @@ version: '3.3'
 services:
     libreddit:
         container_name: libreddit
+        restart: unless-stopped
         ports:
             - '8080:8080'
         image: spikecodes/libreddit
